@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: "coolvetica-regular";
+    src: url("../assets/fonts/coolvetica-regular.otf");
+}

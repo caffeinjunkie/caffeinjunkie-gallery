@@ -2,12 +2,10 @@ import React from 'react'
 
 import { Layout } from '../components/Layout'
 
-export default function Home() {
+export default function NotFound() {
   return (
     <Layout>
-      <div class="text-blue-600">
-        asiikk
-      </div>
+      <div>Sorry! The page you're looking for doesn't exist</div>
     </Layout>
   )
 }
