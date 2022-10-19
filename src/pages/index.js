@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { graphql } from 'gatsby'
 import { Lightbox } from 'react-modal-image';
+import ReactLoading from 'react-loading';
 
 import { Layout } from '../components/Layout'
 import useImagePreloader from '../hooks/useImagePreloader';
@@ -10,7 +11,6 @@ export default function Home({ data }) {
   const [selectedPhoto, setSelectedPhoto] = useState(null);
   const { allSanityPhoto: { nodes: photos } } = data;
   const filteredUrl = photos.map((photo) => photo.url);
-  console.log(filteredUrl, 'fil')
   
   const { imagesPreloaded } = useImagePreloader(filteredUrl)
   
@@ -47,22 +47,35 @@ export default function Home({ data }) {
     )
   }
   
+  const style = { position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" };
+  
   const renderLoadingOverlay = () => (
-    <div>
-      <p className="w-full text-inter bg-white text-center py-24">Loading images</p>
+    <div className="
+      flex-1
+      self-center
+      items-center
+      justify-center
+      "
+      style={style}
+    >
+      <ReactLoading
+        type="cylon"
+        color="#1e293b"
+      />
     </div>
   )
   
   return (
     <Layout>
-      <div
+      {!imagesPreloaded && renderLoadingOverlay()}
+      {imagesPreloaded && <div
         className="
         px-0 gap-0
         grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4"
       >
-        {imagesPreloaded && photos.map(renderImage)}
-      </div>
-      {!imagesPreloaded && renderLoadingOverlay()}
+        {photos.map(renderImage)}
+      </div>}
+      
       {isOpen && <Lightbox
         large={selectedPhoto.url}
         alt={selectedPhoto.title}
