@@ -1,12 +1,12 @@
 export const MENU_ITEMS = [
   {
     text: 'About',
-    className: 'links font-inter flex self-center py-2',
+    className: 'links font-inter flex self-center py-2 ml-8 w-40',
     path: '/about'
   },
   {
     text: 'caffeinjunkie',
-    className: 'links self-center sm:self-start pb-1.5 font-coolvetica text-3xl',
+    className: 'links flex self-center pb-1 font-coolvetica text-3xl w-full justify-center',
     path: '/'
   }
 ];

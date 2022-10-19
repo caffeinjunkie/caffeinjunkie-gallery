@@ -3,20 +3,20 @@ import { Link } from 'gatsby'
 
 import { MENU_ITEMS } from './Navbar.config';
 import { getCurrentBreakpoint } from '../../utils/ScreenUtils';
+import InstagramIcon from '../../assets/svgIcons/InstagramIcon.component'
 
 export default function Navbar() {
-  const isSmallScreen = getCurrentBreakpoint() === 'sm';
-  let navbarMenu = isSmallScreen ? MENU_ITEMS.reverse() : MENU_ITEMS;
+  let navbarMenu = getCurrentBreakpoint() ? MENU_ITEMS : MENU_ITEMS.reverse();
   
   React.useEffect(() => {
-    navbarMenu = isSmallScreen ? MENU_ITEMS.reverse() : MENU_ITEMS;
+    navbarMenu = getCurrentBreakpoint() ? MENU_ITEMS : MENU_ITEMS.reverse();
   })
   
   const renderSocialMedia = () => (
     <div
-      className="flex font-inter self-center py-2 bg-slate-400"
+      className="flex gap-2 justify-center align-center self-center py-2 mr-8 w-40"
     >
-      Social Media
+      <InstagramIcon />
     </div>
   );
   
@@ -27,7 +27,12 @@ export default function Navbar() {
   )
 
   return (
-    <nav className="flex flex-col md:flex-row text-slate-800 justify-between align-center py-6 px-8 border-solid border-b-2 border-slate 100">
+    <nav className="flex flex-col sm:flex-row
+      text-slate-800
+      w-full
+      justify-between align-center
+      py-6
+      border-solid border-b-2 border-slate 100">
       {navbarMenu.map(renderMenu)}
       {renderSocialMedia()}
     </nav>

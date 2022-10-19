@@ -16,11 +16,14 @@
   "dependencies": {
     "@headlessui/react": "^1.7.3",
     "gatsby": "^4.24.4",
+    "gatsby-plugin-gatsby-cloud": "^4.24.0",
+    "gatsby-source-strapi": "^2.0.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.12",
+    "dotenv": "^16.0.3",
     "gatsby-plugin-postcss": "^5.24.0",
     "postcss": "^8.4.18",
     "prettier": "^2.7.1",

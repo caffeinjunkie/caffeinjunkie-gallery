@@ -20,5 +20,5 @@ export const getCurrentBreakpoint = () => {
       currentBreakpoint = breakpoint;
     }
   }
-  return currentBreakpoint ? currentBreakpoint : 'sm';
+  return currentBreakpoint;
 };

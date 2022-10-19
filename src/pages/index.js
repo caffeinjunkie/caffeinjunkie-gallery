@@ -5,24 +5,19 @@ import { Layout } from '../components/Layout'
 export default function Home() {
   return (
     <Layout>
-      <div className="px-4 gap-4 columns-1 md:columns-3 sm:columns-2">
-        <div className="w-full aspect-video mt-5 bg-slate-700" />
-        <div className="w-full aspect-square my-4 bg-slate-700" />
-        <div className="w-full aspect-square my-4 bg-slate-700" />
-        <div className="w-full aspect-video my-4 bg-slate-700" />
-        <div className="w-full aspect-square my-4 bg-slate-700" />
-        <div className="w-full aspect-square my-4 bg-slate-700" />
-        <div className="w-full aspect-video my-4 bg-slate-700" />
-        <div className="w-full aspect-square my-4 bg-slate-700" />
-        <div className="w-full aspect-square my-4 bg-slate-700" />
-        <div className="w-full aspect-square my-4 bg-slate-700" />
-        <div className="w-full aspect-square my-4 bg-slate-700" />
-        <div className="w-full aspect-video my-4 bg-slate-700" />
-        <div className="w-full aspect-square my-4 bg-slate-700" />
-        <div className="w-full aspect-square my-4 bg-slate-700" />
-        <div className="w-full aspect-square my-4 bg-slate-700" />
-        <div className="w-full aspect-video my-4 bg-slate-700" />
-        <div className="w-full aspect-square my-4 bg-slate-700" />
+      <div
+        className="
+        px-0 gap-0
+        grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4"
+      >
+        {[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+        .map((num, index) => (
+          <div
+            className="bg-stone-200"
+          >
+            <img src={`https://picsum.photos/800?random=${index}`} alt="rand 1"/>
+          </div>
+        ))}
       </div>
     </Layout>
   )
