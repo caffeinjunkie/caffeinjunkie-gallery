@@ -11,8 +11,6 @@
 O
 .cache/commonjs/default-html.js,3/6/36b9e2b988d2fbe9e4e3bc502bcd80c65864dff9
 A
-package-lock.json,f/a/fa288d1472d29beccb489a676f68739ad365fc47
-A
 postcss.config.js,3/f/3f70684581fd16ab3be77ca959e0138ef3ee8bfb
 A
 gatsby-browser.js,c/8/c8df22cf90adfac9a95adc94b85984d3a6b193cd
