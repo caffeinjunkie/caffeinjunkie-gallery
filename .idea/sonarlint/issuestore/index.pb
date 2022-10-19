@@ -10,16 +10,6 @@
 src/pages/404.js,e/3/e3bdb0ff8a0893b3bf58690bacf4ab5a7f780aff
 O
 .cache/commonjs/default-html.js,3/6/36b9e2b988d2fbe9e4e3bc502bcd80c65864dff9
-A
-postcss.config.js,3/f/3f70684581fd16ab3be77ca959e0138ef3ee8bfb
-A
-gatsby-browser.js,c/8/c8df22cf90adfac9a95adc94b85984d3a6b193cd
-B
-src/pages/about.js,2/0/207946fdb4f923496ff01d702cfb0e32de6e79c6
-E
-src/styles/global.css,3/e/3ea85257d8c74ab2f79dac9121fc26edb558777a
-B
-tailwind.config.js,0/9/0918cbb76f2c44f223706cec9d31a32cd1177ce4
 N
 src/components/Layout/index.js,8/6/86f2783db4895b1d7c033917d80b3a0b4d6cfa57
 N

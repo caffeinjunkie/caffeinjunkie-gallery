@@ -16,8 +16,13 @@
   "dependencies": {
     "@headlessui/react": "^1.7.3",
     "gatsby": "^4.24.4",
+    "gatsby-plugin-image": "^2.24.0",
+    "gatsby-source-sanity": "^7.5.1",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "react-markdown": "^8.0.3",
+    "react-modal-image": "^2.6.0",
+    "remark-gfm": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.12",

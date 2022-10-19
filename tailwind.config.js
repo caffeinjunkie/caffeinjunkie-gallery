@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         coolvetica: ['coolvetica-regular', 'sans-serif'],
-        normal: ['Helvetica', 'sans-serif'],
+        normal: ['Inter', 'sans-serif'],
       }
     },
   },

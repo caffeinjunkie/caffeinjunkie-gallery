@@ -2,8 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
     font-family: "coolvetica-regular";
     src: url("../assets/fonts/coolvetica-regular.otf");
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #000000cc;
 }
