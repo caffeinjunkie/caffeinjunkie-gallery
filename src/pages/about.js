@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
 import { Layout } from '../components/Layout'
-import aboutImage from '../assets/images/about_pictures.jpg';
+import aboutImage from '../assets/images/about_picture.jpg';
 
 export default function About() {
   const markdown = `

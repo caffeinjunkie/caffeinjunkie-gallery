@@ -16,5 +16,9 @@ N
 src/components/Navbar/index.js,7/6/76ffedc97f48bd319432f8c720b746ec14cddf2f
 ^
 .src/assets/svgIcons/InstagramIcon.component.js,f/7/f798bfab0d7670df0b79b4f055e9416eb161296b
-H
-src/utils/ScreenUtils.js,8/2/82ae1921898b5dd983b7e5a84a5ac6a22b08677c
+A
+gatsby-browser.js,c/8/c8df22cf90adfac9a95adc94b85984d3a6b193cd
+A
+postcss.config.js,3/f/3f70684581fd16ab3be77ca959e0138ef3ee8bfb
+B
+tailwind.config.js,0/9/0918cbb76f2c44f223706cec9d31a32cd1177ce4

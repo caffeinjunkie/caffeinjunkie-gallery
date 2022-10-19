@@ -7,7 +7,24 @@ require('dotenv').config();
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: `caffeinjunkie`,
+    siteUrl: `https://www.caffeinjunkie.gatsbyjs.io`,
+    description: `Get your daily intake!`,
+  },
   plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Caffeinjunkie Gallery',
+        short_name: 'Caffeinjunkie',
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: '#a2466c',
+        display: 'standalone',
+        icon: 'src/assets/images/icon.png',
+      },
+    },
     {
       resolve: `gatsby-source-sanity`,
       options: {
