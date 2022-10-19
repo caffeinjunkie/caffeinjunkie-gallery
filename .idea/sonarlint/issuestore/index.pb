@@ -22,3 +22,11 @@ A
 postcss.config.js,3/f/3f70684581fd16ab3be77ca959e0138ef3ee8bfb
 B
 tailwind.config.js,0/9/0918cbb76f2c44f223706cec9d31a32cd1177ce4
+O
+src/components/Layout/Layout.js,a/3/a39dce0a5cc1e53785ace214d3d00a6dbf9fcabf
+V
+&src/components/Navbar/Navbar.config.js,7/b/7bd4a399079b3bd72be0ffac7cf24dd16d089da0
+O
+src/components/Navbar/Navbar.js,d/9/d98f8b3f1cd3ee72ed5f6e403515ab1d1f07a3ae
+B
+src/pages/index.js,c/1/c16ef34da304c300e7b6c91b3a47fea77c278c7a

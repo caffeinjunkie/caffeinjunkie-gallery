@@ -18,9 +18,7 @@ export default function About() {
   \n
   &nbsp;
   \n
-  I created this website to showcase my pictures
-  \n
-  during photography journey.
+  I took a snap here and there and I post it here.
   \n
   &nbsp;
   \n
