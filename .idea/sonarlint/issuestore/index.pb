@@ -26,5 +26,3 @@ N
 src/components/Navbar/index.js,7/6/76ffedc97f48bd319432f8c720b746ec14cddf2f
 ^
 .src/assets/svgIcons/InstagramIcon.component.js,f/7/f798bfab0d7670df0b79b4f055e9416eb161296b
-H
-src/utils/ScreenUtils.js,8/2/82ae1921898b5dd983b7e5a84a5ac6a22b08677c
