@@ -28,5 +28,3 @@ V
 &src/components/Navbar/Navbar.config.js,7/b/7bd4a399079b3bd72be0ffac7cf24dd16d089da0
 O
 src/components/Navbar/Navbar.js,d/9/d98f8b3f1cd3ee72ed5f6e403515ab1d1f07a3ae
-B
-src/pages/index.js,c/1/c16ef34da304c300e7b6c91b3a47fea77c278c7a

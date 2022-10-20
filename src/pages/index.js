@@ -86,6 +86,13 @@ export default function Home({ data }) {
   )
 }
 
+export function Head() {
+  return (
+    <title>caffeinjunkie | Home</title>
+  )
+}
+
+
 export const query = graphql`
   query MyQuery {
     allSanityPhoto(limit: 10) {
