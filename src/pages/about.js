@@ -7,23 +7,23 @@ import aboutImage from '../assets/images/about_picture.jpg';
 
 export default function About() {
   const markdown = `
-    🚀 **Hi There** 👋
-    \n
-    &nbsp;
-    \n
-    &nbsp;
-    \n
-   
-    ## I'm a Full Stack Engineer working @lifeatbtpn.
-    \n
-    &nbsp;
-    \n
-    I took a snap here and there and I post it here.
-    \n
-    &nbsp;
-    \n
-    Cheers!!!
-  `
+  🚀 **Hi There** 👋
+  \n
+  &nbsp;
+  \n
+  &nbsp;
+  \n
+ 
+  ## I'm a Full Stack Engineer working @lifeatbtpn.
+  \n
+  &nbsp;
+  \n
+  I took a snap here and there and I post it here.
+  \n
+  &nbsp;
+  \n
+  Cheers!!!
+`
 
   return (
     <Layout>
