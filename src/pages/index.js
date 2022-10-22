@@ -95,7 +95,7 @@ export function Head() {
 
 export const query = graphql`
   query MyQuery {
-    allSanityPhoto(limit: 10) {
+    allSanityPhoto(limit: 10, sort: { order: DESC, fields: _createdAt }) {
       nodes {
         id
         thumbnailUrl
