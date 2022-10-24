@@ -22,7 +22,6 @@ export default function SEO({ lang, meta, title}) {
   
   const image = site.siteMetadata.image
   const keywords = site.siteMetadata.keywords
-  console.log(Helmet, 'asi')
   const metaDescription = site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
   

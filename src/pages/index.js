@@ -13,7 +13,6 @@ export default function Home({ data }) {
   const [selectedPhoto, setSelectedPhoto] = useState(null);
   const { allSanityPhoto: { nodes: photos } } = data;
   const style = { position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" };
-  
   const { imagesPreloaded } = useImagePreloader(photos)
   
   const selectImage = (value) => {
@@ -28,7 +27,7 @@ export default function Home({ data }) {
   
   const renderImage = (photo) => (
     <Image
-      key={photo.id}
+      key={photo._id}
       data={photo}
       onClick={() => selectImage(photo)}
     />
@@ -81,7 +80,7 @@ export const query = graphql`
   query PhotoQuery {
     allSanityPhoto(limit: 10, sort: { order: DESC, fields: _createdAt }) {
       nodes {
-        id
+        _id
         thumbnailUrl
         url
         views
