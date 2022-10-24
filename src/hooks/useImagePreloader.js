@@ -26,8 +26,9 @@ export default function useImagePreloader(imageList) {
       }
       
       const imagesPromiseList = []
-      for (const i of imageList) {
-        imagesPromiseList.push(preloadImage(i))
+      for (const { url, thumbnailUrl } of imageList) {
+        imagesPromiseList.push(preloadImage(url))
+        imagesPromiseList.push(preloadImage(thumbnailUrl))
       }
       
       await Promise.all(imagesPromiseList)
