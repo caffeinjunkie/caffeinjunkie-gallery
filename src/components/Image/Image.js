@@ -2,6 +2,7 @@ import React from 'react';
 import Lottie from 'react-lottie';
 
 import * as eyeAnimation from '../../assets/animation/eyeAnimation.json'
+import EyeIcon from "../../assets/svgIcons/EyeIcon"
 
 export default function Image({ data, onClick }) {
   const [isStopped, setIsStopped] = React.useState(true);
@@ -24,6 +25,23 @@ export default function Image({ data, onClick }) {
     />
   )
   
+  const renderLottieAnimation = () => (
+    <div className="hidden sm:flex">
+      <Lottie
+        options={lottieOptions}
+        height={26}
+        width={26}
+        isStopped={isStopped}
+      />
+    </div>
+  )
+  
+  const renderStaticEyeIco = () => (
+    <div className="sm:hidden">
+      <EyeIcon />
+    </div>
+  )
+  
   const renderOverlay = () => (
     <div className="overlay flex flex-col items-center justify-center">
       <div className="text text-white font-inter text-2xl font-thin text-center">
@@ -32,12 +50,8 @@ export default function Image({ data, onClick }) {
       <div className="flex gap-2 flex-row
         items-center justify-center"
       >
-        <Lottie
-          options={lottieOptions}
-          height={26}
-          width={26}
-          isStopped={isStopped}
-        />
+        {renderLottieAnimation()}
+        {renderStaticEyeIco()}
         <div className="text text-white font-inter text-xl text-center">
           {views}
         </div>

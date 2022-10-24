@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import { graphql } from 'gatsby'
 import { Lightbox } from 'react-modal-image';
-import ReactLoading from 'react-loading';
+import Lottie from 'react-lottie'
 
 import { Layout } from '../components/Layout'
 import { Image } from '../components/Image'
 import { SEO } from '../components/SEO'
 import useImagePreloader from '../hooks/useImagePreloader';
+import * as loadingAnimation from '../assets/animation/loadingAnimation.json'
 
 export default function Home({ data }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,6 +15,15 @@ export default function Home({ data }) {
   const { allSanityPhoto: { nodes: photos } } = data;
   const style = { position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" };
   const { imagesPreloaded } = useImagePreloader(photos)
+  
+  const lottieOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: loadingAnimation,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
   
   const selectImage = (value) => {
     setIsOpen(true);
@@ -42,9 +52,10 @@ export default function Home({ data }) {
       "
       style={style}
     >
-      <ReactLoading
-        type="cylon"
-        color="#1e293b"
+      <Lottie
+        options={lottieOptions}
+        height={46}
+        width={210}
       />
     </div>
   )

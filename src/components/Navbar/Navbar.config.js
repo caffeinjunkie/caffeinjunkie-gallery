@@ -1,3 +1,7 @@
+import React from 'react';
+
+import CaffeinJunkieIcon from '../../assets/svgIcons/CaffeinJunkieIcon'
+
 export const MENU_ITEMS = [
   {
     id: 'about',
@@ -7,7 +11,7 @@ export const MENU_ITEMS = [
   },
   {
     id: 'home',
-    text: 'caffeinjunkie',
+    text: <CaffeinJunkieIcon />,
     className: 'links flex self-center pb-1 font-coolvetica text-3xl w-full justify-center',
     path: '/'
   },
