@@ -15,8 +15,8 @@ export default function Navbar() {
     </div>
   );
   
-  const renderMenu = ({ className, path, text }) => (
-    <div key={path} className={className}>
+  const renderMenu = ({ className, path, text, id }) => (
+    <div key={id} className={className}>
       <Link to={path}>{text}</Link>
     </div>
   )
