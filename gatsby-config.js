@@ -10,7 +10,10 @@ module.exports = {
   siteMetadata: {
     title: `caffeinjunkie`,
     siteUrl: `https://www.caffeinjunkie.gatsbyjs.io`,
+    author: `@caffein.junkie`,
     description: `Get your daily intake!`,
+    image: `src/assets/images/logo.png`,
+    keywords: `photography, travel photography, street photography, caffeinjunkie, caffein.junkie, caffein junkie, Satrio Adi Prakoso`,
   },
   plugins: [
     {
@@ -34,6 +37,7 @@ module.exports = {
         graphqlTag: 'default',
       },
     },
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-postcss`,
   ],

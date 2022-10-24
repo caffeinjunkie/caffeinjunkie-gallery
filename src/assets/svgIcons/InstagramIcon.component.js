@@ -7,28 +7,28 @@ const InstagramIcon = () => (
     <path d="M319.965 413.287C268.447 413.287 226.643 371.552 226.643 320.034C226.643 268.433 268.447 226.644 319.965 226.644C371.498 226.644 413.356 268.433 413.356 320.034C413.356 371.552 371.498 413.287 319.965 413.287ZM319.965 176.164C240.55 176.164 176.233 240.619 176.233 320.034C176.233 399.38 240.55 463.767 319.965 463.767C399.38 463.767 463.767 399.38 463.767 320.034C463.767 240.619 399.38 176.164 319.965 176.164Z" fill="url(#paint2_linear_11_2)"/>
     <defs>
       <linearGradient id="paint0_linear_11_2" x1="-3213.17" y1="-3210.3" x2="1022.1" y2="1021.41" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#FFD521"/>
-        <stop offset="0.05" stop-color="#FFD521"/>
-        <stop offset="0.501119" stop-color="#F50000"/>
-        <stop offset="0.95" stop-color="#B900B4"/>
-        <stop offset="0.950079" stop-color="#B900B4"/>
-        <stop offset="1" stop-color="#B900B4"/>
+        <stop stopColor="#FFD521"/>
+        <stop offset="0.05" stopColor="#FFD521"/>
+        <stop offset="0.501119" stopColor="#F50000"/>
+        <stop offset="0.95" stopColor="#B900B4"/>
+        <stop offset="0.950079" stopColor="#B900B4"/>
+        <stop offset="1" stopColor="#B900B4"/>
       </linearGradient>
       <linearGradient id="paint1_linear_11_2" x1="45.0511" y1="45.0926" x2="553.775" y2="553.817" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#FFD521"/>
-        <stop offset="0.05" stop-color="#FFD521"/>
-        <stop offset="0.501119" stop-color="#F50000"/>
-        <stop offset="0.95" stop-color="#B900B4"/>
-        <stop offset="0.950079" stop-color="#B900B4"/>
-        <stop offset="1" stop-color="#B900B4"/>
+        <stop stopColor="#FFD521"/>
+        <stop offset="0.05" stopColor="#FFD521"/>
+        <stop offset="0.501119" stopColor="#F50000"/>
+        <stop offset="0.95" stopColor="#B900B4"/>
+        <stop offset="0.950079" stopColor="#B900B4"/>
+        <stop offset="1" stopColor="#B900B4"/>
       </linearGradient>
       <linearGradient id="paint2_linear_11_2" x1="45.1829" y1="594.921" x2="553.784" y2="86.3194" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#FFD521"/>
-        <stop offset="0.05" stop-color="#FFD521"/>
-        <stop offset="0.501119" stop-color="#F50000"/>
-        <stop offset="0.95" stop-color="#B900B4"/>
-        <stop offset="0.950079" stop-color="#B900B4"/>
-        <stop offset="1" stop-color="#B900B4"/>
+        <stop stopColor="#FFD521"/>
+        <stop offset="0.05" stopColor="#FFD521"/>
+        <stop offset="0.501119" stopColor="#F50000"/>
+        <stop offset="0.95" stopColor="#B900B4"/>
+        <stop offset="0.950079" stopColor="#B900B4"/>
+        <stop offset="1" stopColor="#B900B4"/>
       </linearGradient>
     </defs>
   </svg>

@@ -4,15 +4,17 @@ import { Lightbox } from 'react-modal-image';
 import ReactLoading from 'react-loading';
 
 import { Layout } from '../components/Layout'
+import { Image } from '../components/Image'
+import { SEO } from '../components/SEO'
 import useImagePreloader from '../hooks/useImagePreloader';
 
 export default function Home({ data }) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState(null);
   const { allSanityPhoto: { nodes: photos } } = data;
-  const filteredUrl = photos.map((photo) => photo.url);
+  const style = { position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" };
   
-  const { imagesPreloaded } = useImagePreloader(filteredUrl)
+  const { imagesPreloaded } = useImagePreloader(photos)
   
   const selectImage = (value) => {
     setIsOpen(true);
@@ -24,30 +26,13 @@ export default function Home({ data }) {
     setSelectedPhoto(null);
   }
   
-  const renderImage = (photo) => {
-    const { thumbnailUrl, title, id } = photo;
-    return (
-      <div
-        key={id}
-        className="image-container bg-stone-200 aspect-square"
-        onClick={() => selectImage(photo)}
-      >
-        <img
-          className="w-full block object-cover aspect-square"
-          src={thumbnailUrl}
-          alt={title}
-          loading="lazy"
-        />
-        <div className="overlay flex items-center justify-center">
-          <div className="text text-white font-inter text-2xl font-thin text-center">
-            {title}
-          </div>
-        </div>
-      </div>
-    )
-  }
-  
-  const style = { position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" };
+  const renderImage = (photo) => (
+    <Image
+      key={photo.id}
+      data={photo}
+      onClick={() => selectImage(photo)}
+    />
+  )
   
   const renderLoadingOverlay = () => (
     <div className="
@@ -67,6 +52,7 @@ export default function Home({ data }) {
   
   return (
     <Layout>
+      <SEO title="Home" />
       {!imagesPreloaded && renderLoadingOverlay()}
       {imagesPreloaded && <div
         className="
@@ -75,7 +61,6 @@ export default function Home({ data }) {
       >
         {photos.map(renderImage)}
       </div>}
-      
       {isOpen && <Lightbox
         large={selectedPhoto.url}
         alt={selectedPhoto.title}
@@ -92,9 +77,8 @@ export function Head() {
   )
 }
 
-
 export const query = graphql`
-  query MyQuery {
+  query PhotoQuery {
     allSanityPhoto(limit: 10, sort: { order: DESC, fields: _createdAt }) {
       nodes {
         id
