@@ -1,4 +1,10 @@
 module.exports = {
+  sanity: {
+    dataset: process.env.SANITY_DATASET,
+    projectId: process.env.SANITY_PROJECT_ID,
+    writeToken: process.env.SANITY_WRITE_TOKEN,
+    apiVersion: process.env.SANITY_API_VERSION
+  },
   firebase: {
     apiKey: process.env.GATSBY_FIREBASE_API_KEY,
     authDomain: process.env.GATSBY_FIREBASE_AUTH_DOMAIN,

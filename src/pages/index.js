@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Lottie from 'react-lottie';
-import { initializeApp } from 'firebase/app';
-import { collection, doc, getDocs, getFirestore, setDoc } from 'firebase/firestore';
 import { Lightbox } from 'react-modal-image';
 import { graphql } from 'gatsby';
 
@@ -9,46 +7,46 @@ import { Image } from '../components/Image';
 import { Layout } from '../components/Layout';
 import { Seo } from '../components/Seo';
 import useImagePreloader from '../hooks/useImagePreloader';
+import useMutation from '../hooks/useMutation';
 import lottieOptions from './config';
-import config from '../config';
-
-const { firebase: firebaseConfig } = config;
+import sanity from '../sanity/client';
 
 export default function Home({ data }) {
+  const { allSanityPhoto: { nodes: photos } } = data;
   const [isOpen, setIsOpen] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState(null);
-  const { allSanityPhoto: { nodes: photos } } = data;
-  const style = { position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" };
+  const [allPhotos, setAllPhotos] = useState(photos);
   const { imagesPreloaded = false } = useImagePreloader(photos)
-  const [isLoading, setIsLoading] = useState(true);
-  const [allViews, setAllViews] = useState([]);
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-  
-  async function getViews() {
-    const viewsCol = collection(db, 'views');
-    const viewSnapshot = await getDocs(viewsCol);
-    return viewSnapshot.docs.map(val => val.data());
-  }
+  const style = { position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" };
+  const mutate = useMutation;
+  const subscription = useRef(null);
+  const subscriptionQuery = `*[_type == "photo"]`
+  console.log(photos, 'phos')
   
   React.useEffect(() => {
-    async function fetchData() {
-      const res = await getViews();
-      setIsLoading(!imagesPreloaded && !res)
-      setAllViews(res)
-    }
-    
-    fetchData();
+    subscription.value = sanity.listen(subscriptionQuery).subscribe((update) => {
+      console.log(update, 'safs')
+      const { result } = update;
+      const { _id, views } = result;
+      const newPhotos = allPhotos.map((photo) => photo._id === _id ? { ...photo, views } : photo)
+      console.log(newPhotos, 'new photo')
+      setAllPhotos(newPhotos);
+    })
   })
   
-  const selectImage = async (photo, views) => {
+  const selectImage = async (photo) => {
     setIsOpen(true);
     setSelectedPhoto(photo);
+    const payload = {
+      patch: {
+        id: photo._id,
+        set: {
+          views: photo.views + 1
+        }
+      }
+    }
     
-    await setDoc(doc(db, "views", photo._id), {
-      id: photo._id,
-      views: views + 1
-    });
+    await mutate(payload)
   }
   
   const unselectImage = () => {
@@ -56,22 +54,13 @@ export default function Home({ data }) {
     setSelectedPhoto(null);
   }
   
-  const renderImage = (photo) => {
-    let views = 0;
-    try {
-      views = allViews.filter(({ id }) => id === photo._id)[0].views;
-    } catch (e) {
-      views = 0;
-    }
-    return (
-      <Image
-        key={photo._id}
-        data={photo}
-        views={views}
-        onClick={() => selectImage(photo, views)}
-      />
-    )
-  }
+  const renderImage = (photo) => (
+    <Image
+      key={photo._id}
+      data={photo}
+      onClick={() => selectImage(photo)}
+    />
+  )
   
   const renderLoadingOverlay = () => (
     <div className="
@@ -79,7 +68,7 @@ export default function Home({ data }) {
       self-center
       items-center
       justify-center"
-         style={style}
+      style={style}
     >
       <Lottie
         options={lottieOptions}
@@ -92,13 +81,13 @@ export default function Home({ data }) {
   return (
     <Layout>
       <Seo title="Home" />
-      {isLoading && renderLoadingOverlay()}
-      {!isLoading && <div
+      {!imagesPreloaded && renderLoadingOverlay()}
+      {imagesPreloaded && <div
         className="
         px-0 gap-0
         grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4"
       >
-        {photos.map(renderImage)}
+        {allPhotos.map(renderImage)}
       </div>}
       {isOpen && <Lightbox
         large={selectedPhoto.url}
@@ -123,6 +112,7 @@ export const query = graphql`
         _id
         thumbnailUrl
         url
+        views
         title
       }
     }

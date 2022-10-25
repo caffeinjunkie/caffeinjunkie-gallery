@@ -4,9 +4,9 @@ import Lottie from 'react-lottie';
 import lottieOptions from './Image.config';
 import EyeIcon from '../../assets/svgIcons/EyeIcon';
 
-export default function Image({ data, onClick, views = 0 }) {
+export default function Image({ data, onClick }) {
   const [isStopped, setIsStopped] = React.useState(true);
-  const { thumbnailUrl, title, id } = data;
+  const { thumbnailUrl, title, id, views } = data;
   
   const renderImage = () => (
     <img
@@ -39,9 +39,7 @@ export default function Image({ data, onClick, views = 0 }) {
       <div className="text text-white font-inter text-2xl font-thin text-center">
         {title}
       </div>
-      <div className="flex gap-2 flex-row
-        items-center justify-center"
-      >
+      <div className="flex gap-2 flex-row items-center justify-center">
         {renderLottieAnimation()}
         {renderStaticEyeIco()}
         <div className="text text-white font-inter text-xl text-center">

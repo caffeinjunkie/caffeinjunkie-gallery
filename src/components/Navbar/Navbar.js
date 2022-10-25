@@ -7,7 +7,7 @@ import InstagramIcon from '../../assets/svgIcons/InstagramIcon.component'
 export default function Navbar() {
   const renderSocialMedia = () => (
     <div
-      className="flex gap-2 justify-center sm:justify-end align-center self-center py-2 mx-8 w-40"
+      className="hidden sm:flex gap-2 justify-center sm:justify-end align-center self-center py-2 mx-8 w-40"
     >
       <a
         href="https://www.instagram.com/caffein.junkie/"
