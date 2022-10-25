@@ -23,8 +23,24 @@ E
 O
 src/components/Layout/Layout.js,a/3/a39dce0a5cc1e53785ace214d3d00a6dbf9fcabf
 N
-src/hooks/useImagePreloader.js,4/3/431f6ee88fee5daeb56246d93258fbbab03c3b99
-N
 src/components/Layout/index.js,8/6/86f2783db4895b1d7c033917d80b3a0b4d6cfa57
 M
 src/components/Image/index.js,5/2/5207cdf4d40fa4efbcde22a90cc6bb9026e121f9
+<
+package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
+V
+&src/assets/animation/eyeAnimation.json,b/5/b56ebd6e9a0325c9cd3c2bb7bab4cdae8a9fb81f
+B
+src/pages/about.js,2/0/207946fdb4f923496ff01d702cfb0e32de6e79c6
+N
+src/assets/svgIcons/EyeIcon.js,b/7/b761b0fb3ca367bebc6d7b7c279aa43f356431f8
+O
+src/components/Navbar/Navbar.js,d/9/d98f8b3f1cd3ee72ed5f6e403515ab1d1f07a3ae
+I
+src/components/SEO/SEO.js,d/4/d45d9ee651240fd4ee25fd77c807331fd0df2323
+K
+src/components/SEO/index.js,b/8/b8e15cddf4aa360402b0fc3a5e98a71b036a7a38
+X
+(src/assets/svgIcons/CaffeinJunkieIcon.js,f/c/fc8136329fe857631659fa1383b96c90ac8c41a3
+^
+.src/assets/svgIcons/InstagramIcon.component.js,f/7/f798bfab0d7670df0b79b4f055e9416eb161296b

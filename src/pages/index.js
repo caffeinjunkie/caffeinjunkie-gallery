@@ -7,6 +7,7 @@ import { Layout } from '../components/Layout'
 import { Image } from '../components/Image'
 import { SEO } from '../components/SEO'
 import useImagePreloader from '../hooks/useImagePreloader';
+import useMutation from '../hooks/useMutation';
 import * as loadingAnimation from '../assets/animation/loadingAnimation.json'
 
 export default function Home({ data }) {
@@ -14,7 +15,8 @@ export default function Home({ data }) {
   const [selectedPhoto, setSelectedPhoto] = useState(null);
   const { allSanityPhoto: { nodes: photos } } = data;
   const style = { position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" };
-  const { imagesPreloaded } = useImagePreloader(photos)
+  const { imagesPreloaded = false } = useImagePreloader(photos)
+  const mutate = useMutation;
   
   const lottieOptions = {
     loop: true,
@@ -25,9 +27,18 @@ export default function Home({ data }) {
     }
   };
   
-  const selectImage = (value) => {
+  const selectImage = async (value) => {
     setIsOpen(true);
     setSelectedPhoto(value);
+    const payload = {
+      patch: {
+        id: value._id,
+        set: {
+          views: value.views + 1
+        }
+      }
+    }
+    await mutate(payload);
   }
   
   const unselectImage = () => {

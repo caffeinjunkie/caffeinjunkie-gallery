@@ -6,7 +6,7 @@ export const MENU_ITEMS = [
   {
     id: 'about',
     text: 'About',
-    className: 'links font-inter self-center py-2 mx-8 w-40 justify-center sm:justify-start hidden sm:flex',
+    className: 'links font-inter self-center py-2 mx-8 w-40 justify-center sm:justify-start hidden sm:flex hover:text-slate-500',
     path: '/about'
   },
   {
