@@ -26,8 +26,6 @@ M
 src/components/Image/index.js,5/2/5207cdf4d40fa4efbcde22a90cc6bb9026e121f9
 V
 &src/assets/animation/eyeAnimation.json,b/5/b56ebd6e9a0325c9cd3c2bb7bab4cdae8a9fb81f
-N
-src/assets/svgIcons/EyeIcon.js,b/7/b761b0fb3ca367bebc6d7b7c279aa43f356431f8
 I
 src/components/SEO/SEO.js,d/4/d45d9ee651240fd4ee25fd77c807331fd0df2323
 K

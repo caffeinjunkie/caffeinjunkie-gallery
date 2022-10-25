@@ -9,6 +9,4 @@ const lottieOptions = {
   }
 };
 
-export default {
-  lottieOptions
-}
+export default lottieOptions;

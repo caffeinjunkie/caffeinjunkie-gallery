@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95105e0a-ed67-4714-a021-126092faa713" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Seo/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SEO/SEO.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Seo/Seo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SEO/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/svgIcons/EyeIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/svgIcons/EyeIcon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Image/Image.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Image/Image.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Image/Image.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Image/Image.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +92,7 @@
       <workItem from="1666461299108" duration="181000" />
       <workItem from="1666596709660" duration="9460000" />
       <workItem from="1666634222028" duration="1940000" />
-      <workItem from="1666672534600" duration="13880000" />
+      <workItem from="1666672534600" duration="14205000" />
     </task>
     <servers />
   </component>

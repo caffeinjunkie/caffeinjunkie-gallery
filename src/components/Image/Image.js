@@ -1,10 +1,8 @@
 import React from 'react';
 import Lottie from 'react-lottie';
 
-import config from './Image.config';
+import lottieOptions from './Image.config';
 import EyeIcon from '../../assets/svgIcons/EyeIcon';
-
-const { lottieOptions } = config;
 
 export default function Image({ data, onClick, views = 0 }) {
   const [isStopped, setIsStopped] = React.useState(true);
@@ -60,6 +58,7 @@ export default function Image({ data, onClick, views = 0 }) {
       onClick={onClick}
       onMouseEnter={() => setIsStopped(false)}
       onMouseLeave={() => setIsStopped(true)}
+      role="presentation"
     >
       {renderImage()}
       {renderOverlay()}
