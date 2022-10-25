@@ -1,20 +1,7 @@
 import React from 'react';
-import Lottie from 'react-lottie';
-
-import EyeIcon from '../../assets/svgIcons/EyeIcon';
-import * as eyeAnimation from '../../assets/animation/eyeAnimation.json'
 
 export default function Image({ data, onClick }) {
-  const [isStopped, setIsStopped] = React.useState(true);
-  const { thumbnailUrl, title, id, views } = data;
-  const lottieOptions = {
-    loop: false,
-    autoplay: false,
-    animationData: eyeAnimation,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
-    }
-  };
+  const { thumbnailUrl, title, id } = data;
   
   const renderImage = () => (
     <img
@@ -25,34 +12,10 @@ export default function Image({ data, onClick }) {
     />
   )
   
-  const renderLottieAnimation = () => (
-    <div className="hidden sm:flex">
-      <Lottie
-        options={lottieOptions}
-        height={26}
-        width={26}
-        isStopped={isStopped}
-      />
-    </div>
-  )
-  
-  const renderStaticEyeIco = () => (
-    <div className="sm:hidden">
-      <EyeIcon />
-    </div>
-  )
-  
   const renderOverlay = () => (
     <div className="overlay flex flex-col items-center justify-center">
       <div className="text text-white font-inter text-2xl font-thin text-center">
         {title}
-      </div>
-      <div className="flex gap-2 flex-row items-center justify-center">
-        {renderLottieAnimation()}
-        {renderStaticEyeIco()}
-        <div className="text text-white font-inter text-xl text-center">
-          {views}
-        </div>
       </div>
     </div>
   )
@@ -62,8 +25,6 @@ export default function Image({ data, onClick }) {
       key={id}
       className="image-container aspect-square"
       onClick={onClick}
-      onMouseEnter={() => setIsStopped(false)}
-      onMouseLeave={() => setIsStopped(true)}
       role="presentation"
     >
       {renderImage()}
