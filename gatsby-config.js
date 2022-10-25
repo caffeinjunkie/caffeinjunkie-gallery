@@ -35,7 +35,8 @@ module.exports = {
         dataset: process.env.SANITY_DATASET,
         token: process.env.SANITY_READ_TOKENs,
         graphqlTag: 'default',
-        overlayDrafts: true
+        overlayDrafts: true,
+        watchMode: true
       },
     },
     `gatsby-plugin-react-helmet`,

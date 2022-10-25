@@ -11,8 +11,6 @@ O
 N
 src/components/Navbar/index.js,7/6/76ffedc97f48bd319432f8c720b746ec14cddf2f
 A
-gatsby-browser.js,c/8/c8df22cf90adfac9a95adc94b85984d3a6b193cd
-A
 postcss.config.js,3/f/3f70684581fd16ab3be77ca959e0138ef3ee8bfb
 B
 tailwind.config.js,0/9/0918cbb76f2c44f223706cec9d31a32cd1177ce4
@@ -26,12 +24,8 @@ N
 src/components/Layout/index.js,8/6/86f2783db4895b1d7c033917d80b3a0b4d6cfa57
 M
 src/components/Image/index.js,5/2/5207cdf4d40fa4efbcde22a90cc6bb9026e121f9
-<
-package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
 V
 &src/assets/animation/eyeAnimation.json,b/5/b56ebd6e9a0325c9cd3c2bb7bab4cdae8a9fb81f
-B
-src/pages/about.js,2/0/207946fdb4f923496ff01d702cfb0e32de6e79c6
 N
 src/assets/svgIcons/EyeIcon.js,b/7/b761b0fb3ca367bebc6d7b7c279aa43f356431f8
 O
