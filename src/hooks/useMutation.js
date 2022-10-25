@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export default async function useMutation(input) {
-  const baseUrl = `https://${process.env.SA}.api.sanity.io`;
+  const baseUrl = `https://${process.env.GATSBY_SANITY_PROJECT_ID}.api.sanity.io`;
   const url = `${baseUrl}/v2021-03-25/data/mutate/production`;
   const headers = {
     'Content-Type': 'application/json',
