@@ -1,12 +1,20 @@
 import React from 'react';
 import Lottie from 'react-lottie';
 
-import lottieOptions from './Image.config';
 import EyeIcon from '../../assets/svgIcons/EyeIcon';
+import * as eyeAnimation from '../../assets/animation/eyeAnimation.json'
 
 export default function Image({ data, onClick }) {
   const [isStopped, setIsStopped] = React.useState(true);
   const { thumbnailUrl, title, id, views } = data;
+  const lottieOptions = {
+    loop: false,
+    autoplay: false,
+    animationData: eyeAnimation,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
   
   const renderImage = () => (
     <img

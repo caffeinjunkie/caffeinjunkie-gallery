@@ -8,8 +8,8 @@ import { Layout } from '../components/Layout';
 import { Seo } from '../components/Seo';
 import useImagePreloader from '../hooks/useImagePreloader';
 import useMutation from '../hooks/useMutation';
-import lottieOptions from './home.config';
 import sanity from '../sanity/client';
+import * as loadingAnimation from '../assets/animation/loadingAnimation.json'
 
 export default function Home({ data }) {
   const { allSanityPhoto: { nodes: photos } } = data;
@@ -21,6 +21,14 @@ export default function Home({ data }) {
   const mutate = useMutation;
   const subscription = useRef(null);
   const subscriptionQuery = `*[_type == "photo"]`
+  const lottieOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: loadingAnimation,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
   
   React.useEffect(() => {
     subscription.value = sanity.listen(subscriptionQuery).subscribe((update) => {
