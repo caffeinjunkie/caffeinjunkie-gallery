@@ -8,7 +8,7 @@ import { Layout } from '../components/Layout';
 import { Seo } from '../components/Seo';
 import useImagePreloader from '../hooks/useImagePreloader';
 import useMutation from '../hooks/useMutation';
-import lottieOptions from './config';
+import lottieOptions from './home.config';
 import sanity from '../sanity/client';
 
 export default function Home({ data }) {
@@ -21,15 +21,12 @@ export default function Home({ data }) {
   const mutate = useMutation;
   const subscription = useRef(null);
   const subscriptionQuery = `*[_type == "photo"]`
-  console.log(photos, 'phos')
   
   React.useEffect(() => {
     subscription.value = sanity.listen(subscriptionQuery).subscribe((update) => {
-      console.log(update, 'safs')
       const { result } = update;
       const { _id, views } = result;
       const newPhotos = allPhotos.map((photo) => photo._id === _id ? { ...photo, views } : photo)
-      console.log(newPhotos, 'new photo')
       setAllPhotos(newPhotos);
     })
   })
