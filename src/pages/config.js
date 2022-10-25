@@ -1,6 +1,6 @@
 import * as loadingAnimation from '../assets/animation/loadingAnimation.json'
 
-export const lottieOptions = {
+const lottieOptions = {
   loop: true,
   autoplay: true,
   animationData: loadingAnimation,
@@ -9,6 +9,4 @@ export const lottieOptions = {
   }
 };
 
-export default {
-  lottieOptions
-}
+export default lottieOptions

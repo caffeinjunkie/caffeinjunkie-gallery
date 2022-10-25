@@ -9,9 +9,13 @@ export default function Navbar() {
     <div
       className="flex gap-2 justify-center sm:justify-end align-center self-center py-2 mx-8 w-40"
     >
-      <Link to="https://www.instagram.com/caffein.junkie/" target="_blank">
+      <a
+        href="https://www.instagram.com/caffein.junkie/"
+        target="_blank"
+        rel="noreferrer"
+        >
         <InstagramIcon />
-      </Link>
+      </a>
     </div>
   );
   

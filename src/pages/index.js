@@ -7,12 +7,11 @@ import { graphql } from 'gatsby';
 
 import { Image } from '../components/Image';
 import { Layout } from '../components/Layout';
-import { SEO } from '../components/SEO';
+import { Seo } from '../components/Seo';
 import useImagePreloader from '../hooks/useImagePreloader';
-import homeConfig from './config';
+import lottieOptions from './config';
 import config from '../../config';
 
-const { lottieOptions } = homeConfig;
 const { firebase: firebaseConfig } = config;
 
 export default function Home({ data }) {
@@ -40,7 +39,7 @@ export default function Home({ data }) {
     }
     
     fetchData();
-  }, [imagesPreloaded, getViews])
+  })
   
   const selectImage = async (photo, views) => {
     setIsOpen(true);
@@ -92,7 +91,7 @@ export default function Home({ data }) {
   
   return (
     <Layout>
-      <SEO title="Home" />
+      <Seo title="Home" />
       {isLoading && renderLoadingOverlay()}
       {!isLoading && <div
         className="
