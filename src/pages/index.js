@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import Lottie from 'react-lottie';
-import { Lightbox } from 'react-modal-image';
 import { graphql } from 'gatsby';
 
 import { Image } from '../components/Image';
@@ -12,8 +11,6 @@ import * as loadingAnimation from '../assets/animation/loadingAnimation.json'
 
 export default function Home({ data }) {
   const { allSanityPhoto: { nodes: photos } } = data;
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedPhoto, setSelectedPhoto] = useState(null);
   const [allPhotos, setAllPhotos] = useState(photos);
   const { imagesPreloaded = false } = useImagePreloader(photos)
   const style = { position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" };
@@ -43,21 +40,10 @@ export default function Home({ data }) {
     }
   }, [])
   
-  const selectImage = async (photo) => {
-    setIsOpen(true);
-    setSelectedPhoto(photo);
-  }
-  
-  const unselectImage = () => {
-    setIsOpen(false);
-    setSelectedPhoto(null);
-  }
-  
   const renderImage = (photo) => (
     <Image
       key={photo._id}
       data={photo}
-      onClick={() => selectImage(photo)}
     />
   )
   
@@ -88,12 +74,6 @@ export default function Home({ data }) {
       >
         {allPhotos.map(renderImage)}
       </div>}
-      {isOpen && <Lightbox
-        large={selectedPhoto.url}
-        alt={selectedPhoto.title}
-        hideDownload
-        onClose={unselectImage}
-      />}
     </Layout>
   )
 }

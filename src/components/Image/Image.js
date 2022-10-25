@@ -1,7 +1,8 @@
 import React from 'react';
+import { FancyBox } from "../FancyBox"
 
-export default function Image({ data, onClick }) {
-  const { thumbnailUrl, title, id } = data;
+export default function Image({ data }) {
+  const { thumbnailUrl, title, id, url } = data;
   
   const renderImage = () => (
     <img
@@ -21,14 +22,17 @@ export default function Image({ data, onClick }) {
   )
   
   return (
-    <div
-      key={id}
-      className="image-container aspect-square"
-      onClick={onClick}
-      role="presentation"
-    >
-      {renderImage()}
-      {renderOverlay()}
-    </div>
+    <FancyBox options={{ infinite: false }}>
+      <div
+        key={id}
+        className="image-container aspect-square"
+        data-fancybox="gallery"
+        data-src={url}
+        role="presentation"
+      >
+        {renderImage()}
+        {renderOverlay()}
+      </div>
+    </FancyBox>
   )
 }

@@ -29,5 +29,10 @@ K
 src/components/SEO/index.js,b/8/b8e15cddf4aa360402b0fc3a5e98a71b036a7a38
 X
 (src/assets/svgIcons/CaffeinJunkieIcon.js,f/c/fc8136329fe857631659fa1383b96c90ac8c41a3
-^
-.src/assets/svgIcons/InstagramIcon.component.js,f/7/f798bfab0d7670df0b79b4f055e9416eb161296b
+<
+package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
+A
+gatsby-browser.js,c/8/c8df22cf90adfac9a95adc94b85984d3a6b193cd
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
