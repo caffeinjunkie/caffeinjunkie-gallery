@@ -41,8 +41,7 @@ export default function Navbar() {
           {DRAWER_ITEMS.map(({id, children}) => (
             <div
               key={id}
-              className="py-3 px-4 rounded-md mx-1
-              font-regular text-slate-800"
+              className="font-regular text-slate-800"
               onClick={() => setIsDrawerOpen(false)}
             >
               {children}

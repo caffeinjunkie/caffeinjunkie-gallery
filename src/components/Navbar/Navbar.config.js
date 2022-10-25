@@ -22,7 +22,7 @@ export const MENU_ITEMS = [
 export const DRAWER_ITEMS = [
   {
     id: 'about-drawer',
-    children: <Link to='/about' className="flex flex-row items-center gap-2 pr-24">
+    children: <Link to='/about' className="flex flex-row items-center gap-2 py-3 pl-4 rounded-md mx-1 pr-24">
       <Info />
       About
     </Link>
@@ -33,7 +33,7 @@ export const DRAWER_ITEMS = [
       href="https://www.instagram.com/caffein.junkie/"
       target="_blank"
       rel="noreferrer"
-      className="flex flex-row items-center gap-2 pr-24"
+      className="flex flex-row items-center gap-2 py-3 pl-4 rounded-md mx-1 pr-24"
     >
       <Instagram />
       caffein.junkie

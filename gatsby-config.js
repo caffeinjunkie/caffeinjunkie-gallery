@@ -13,7 +13,7 @@ module.exports = {
     author: `@caffein.junkie`,
     description: `Get your daily intake!`,
     image: `src/assets/images/logo.png`,
-    keywords: `photography, travel photography, street photography, caffeinjunkie, caffein.junkie, caffein junkie, Satrio Adi Prakoso`,
+    keywords: `photography, travel photography, street photography, caffeinjunkie, caffein.junkie, caffein junkie, caffeine junkie`,
   },
   plugins: [
     {
