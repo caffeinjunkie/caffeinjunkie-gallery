@@ -39,6 +39,12 @@ export default function Home({ data }) {
     })
   })
   
+  React.useEffect(() => {
+    return () => {
+      subscription.value.unsubscribe();
+    }
+  }, [])
+  
   const selectImage = async (photo) => {
     setIsOpen(true);
     setSelectedPhoto(photo);

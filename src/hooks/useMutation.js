@@ -19,6 +19,5 @@ export default async function useMutation(input) {
     withCredentials: true
   }
   
-  await axios.post(url, payload, axiosConfig).then((res) => console.log(res, 'reee'))
-  .catch((e) => console.log(e, 'eee'))
+  await axios.post(url, payload, axiosConfig);
 }
