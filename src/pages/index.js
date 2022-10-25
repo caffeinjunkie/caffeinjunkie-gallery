@@ -7,7 +7,6 @@ import { Image } from '../components/Image';
 import { Layout } from '../components/Layout';
 import { Seo } from '../components/Seo';
 import useImagePreloader from '../hooks/useImagePreloader';
-import useMutation from '../hooks/useMutation';
 import sanity from '../sanity/client';
 import * as loadingAnimation from '../assets/animation/loadingAnimation.json'
 
@@ -18,7 +17,6 @@ export default function Home({ data }) {
   const [allPhotos, setAllPhotos] = useState(photos);
   const { imagesPreloaded = false } = useImagePreloader(photos)
   const style = { position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" };
-  const mutate = useMutation;
   const subscription = useRef(null);
   const subscriptionQuery = `*[_type == "photo"]`
   const lottieOptions = {
@@ -48,16 +46,6 @@ export default function Home({ data }) {
   const selectImage = async (photo) => {
     setIsOpen(true);
     setSelectedPhoto(photo);
-    const payload = {
-      patch: {
-        id: photo._id,
-        set: {
-          views: photo.views + 1
-        }
-      }
-    }
-    
-    await mutate(payload)
   }
   
   const unselectImage = () => {
