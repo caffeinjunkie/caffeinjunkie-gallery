@@ -10,7 +10,7 @@ import { Layout } from '../components/Layout';
 import { Seo } from '../components/Seo';
 import useImagePreloader from '../hooks/useImagePreloader';
 import lottieOptions from './config';
-import config from '../../config';
+import config from '../config';
 
 const { firebase: firebaseConfig } = config;
 
