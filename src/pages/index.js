@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
-import Lottie from 'react-lottie'
-import { initializeApp } from 'firebase/app'
-import { collection, doc, getDocs, getFirestore, setDoc } from 'firebase/firestore'
-import { Lightbox } from 'react-modal-image'
+import React, { useState } from 'react';
+import Lottie from 'react-lottie';
+import { initializeApp } from 'firebase/app';
+import { collection, doc, getDocs, getFirestore, setDoc } from 'firebase/firestore';
+import { Lightbox } from 'react-modal-image';
+import { graphql } from 'gatsby';
 
-import { Image } from '../components/Image'
-import { Layout } from '../components/Layout'
-import { SEO } from '../components/SEO'
-import useImagePreloader from '../hooks/useImagePreloader'
+import { Image } from '../components/Image';
+import { Layout } from '../components/Layout';
+import { SEO } from '../components/SEO';
+import useImagePreloader from '../hooks/useImagePreloader';
 import homeConfig from './config';
 import config from '../../config';
 
