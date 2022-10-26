@@ -15,8 +15,6 @@ B
 src/pages/404.js,e/3/e3bdb0ff8a0893b3bf58690bacf4ab5a7f780aff
 E
 src/styles/global.css,3/e/3ea85257d8c74ab2f79dac9121fc26edb558777a
-O
-src/components/Layout/Layout.js,a/3/a39dce0a5cc1e53785ace214d3d00a6dbf9fcabf
 N
 src/components/Layout/index.js,8/6/86f2783db4895b1d7c033917d80b3a0b4d6cfa57
 M

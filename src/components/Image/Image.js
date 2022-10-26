@@ -2,12 +2,16 @@ import React from 'react';
 import { FancyBox } from "../FancyBox"
 
 export default function Image({ data }) {
-  const { thumbnailUrl, title, id, url } = data;
+  const { title, id, url } = data;
+  console.log(url, 'urlll')
+  const imgBaseUrl = 'https://ik.imagekit.io/caffeinjunkie/';
+  const responsiveThumbnail = `${imgBaseUrl}/tr:w-600/${url}`
+  const largeImg = `${imgBaseUrl}/${url}`
   
   const renderImage = () => (
     <img
       className="w-full block object-cover aspect-square"
-      src={thumbnailUrl}
+      src={responsiveThumbnail}
       alt={title}
       loading="lazy"
     />
@@ -27,7 +31,7 @@ export default function Image({ data }) {
         key={id}
         className="image-container aspect-square"
         data-fancybox="gallery"
-        data-src={url}
+        data-src={largeImg}
         role="presentation"
       >
         {renderImage()}

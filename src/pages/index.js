@@ -89,7 +89,6 @@ export const query = graphql`
     allSanityPhoto(limit: 10, sort: { order: DESC, fields: _createdAt }) {
       nodes {
         _id
-        thumbnailUrl
         url
         views
         title

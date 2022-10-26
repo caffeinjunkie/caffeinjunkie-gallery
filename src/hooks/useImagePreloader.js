@@ -26,9 +26,10 @@ export default function useImagePreloader(imageList) {
       }
       
       const imagesPromiseList = []
-      for (const { url, thumbnailUrl } of imageList) {
-        imagesPromiseList.push(preloadImage(url))
-        imagesPromiseList.push(preloadImage(thumbnailUrl))
+      for (const { url } of imageList) {
+        const imgBaseUrl = 'https://ik.imagekit.io/caffeinjunkie/';
+        const largeImg = `${imgBaseUrl}/${url}`
+        imagesPromiseList.push(preloadImage(largeImg))
       }
       
       await Promise.all(imagesPromiseList)
