@@ -3,10 +3,9 @@ import { FancyBox } from "../FancyBox"
 
 export default function Image({ data }) {
   const { title, id, url } = data;
-  console.log(url, 'urlll')
   const imgBaseUrl = 'https://ik.imagekit.io/caffeinjunkie/';
-  const responsiveThumbnail = `${imgBaseUrl}/tr:w-600/${url}`
-  const largeImg = `${imgBaseUrl}/${url}`
+  const responsiveThumbnail = `${imgBaseUrl}/tr:w-0.4/${url}`;
+  const largeImg = `${imgBaseUrl}/tr:w-0.8/${url}`;
   
   const renderImage = () => (
     <img
