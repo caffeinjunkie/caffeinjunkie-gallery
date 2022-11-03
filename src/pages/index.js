@@ -1,21 +1,17 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import Lottie from 'react-lottie';
 import { graphql } from 'gatsby';
 
-import { Image } from '../components/Image';
+import { ImageLayout } from '../components/ImageLayout';
 import { Layout } from '../components/Layout';
 import { Seo } from '../components/Seo';
 import useImagePreloader from '../hooks/useImagePreloader';
-import sanity from '../sanity/client';
 import * as loadingAnimation from '../assets/animation/loadingAnimation.json'
 
 export default function Home({ data }) {
   const { allSanityPhoto: { nodes: photos } } = data;
-  const [allPhotos, setAllPhotos] = useState(photos);
   const { imagesPreloaded = false } = useImagePreloader(photos)
   const style = { position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" };
-  const subscription = useRef(null);
-  const subscriptionQuery = `*[_type == "photo"]`
   const lottieOptions = {
     loop: true,
     autoplay: true,
@@ -25,23 +21,8 @@ export default function Home({ data }) {
     }
   };
   
-  React.useEffect(() => {
-    subscription.value = sanity.listen(subscriptionQuery).subscribe((update) => {
-      const { result } = update;
-      const { _id, views } = result;
-      const newPhotos = allPhotos.map((photo) => photo._id === _id ? { ...photo, views } : photo)
-      setAllPhotos(newPhotos);
-    })
-  })
-  
-  React.useEffect(() => {
-    return () => {
-      subscription.value.unsubscribe();
-    }
-  }, [])
-  
   const renderImage = (photo) => (
-    <Image
+    <ImageLayout
       key={photo._id}
       data={photo}
     />
@@ -72,7 +53,7 @@ export default function Home({ data }) {
         px-0 gap-0
         grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4"
       >
-        {allPhotos.map(renderImage)}
+        {photos.map(renderImage)}
       </div>}
     </Layout>
   )
@@ -86,13 +67,21 @@ export function Head() {
 
 export const query = graphql`
   query PhotoQuery {
-    allSanityPhoto(limit: 10, sort: { order: DESC, fields: _createdAt }) {
+    allSanityPhoto(sort: { order: DESC, fields: _createdAt }) {
       nodes {
         _id
         url
         views
         title
+        cameraMetadata {
+          camera
+          lens
+          settings {
+            iso
+            aperture
+            shutterSpeed
+          }
+        }
       }
     }
-}
-`
+}`

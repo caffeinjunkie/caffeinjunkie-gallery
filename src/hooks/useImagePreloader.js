@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-function preloadImage (src) {
+export function preloadImage (src) {
   return new Promise((resolve, reject) => {
     const img = new Image()
     img.onload = () => {
@@ -48,5 +48,5 @@ export default function useImagePreloader(imageList) {
     }
   }, [imageList])
   
-  return { imagesPreloaded }
+  return { imagesPreloaded, preloadImage }
 }
