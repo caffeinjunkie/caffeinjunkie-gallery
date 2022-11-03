@@ -91,11 +91,11 @@ export default function ImageLayout({ data }) {
     
     return (
       <>
-        <div className="flex text text-white font-inter font-semibold text-3xl text-center">
+        <div className="flex text text-white font-inter font-semibold px-8 text-3xl text-center">
           {title}
         </div>
         <div
-          className="flex flex-col w-auto px-12 items-start justify-center gap-1">
+          className="flex flex-col w-fit mx-12 xl:mx-8 2xl:mx-14 xl:px-4 items-start justify-center gap-1">
           {renderMetadata(cameraAndLensMetadataValue)}
           {Object.entries(settings).map((metadata) => renderMetadata(getMetadataValues(metadata)))}
         </div>

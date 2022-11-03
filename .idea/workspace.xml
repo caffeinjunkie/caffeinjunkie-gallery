@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95105e0a-ed67-4714-a021-126092faa713" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Image/Image.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ImageLayout/ImageLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Image/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ImageLayout/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useImagePreloader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useImagePreloader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ImageLayout/ImageLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ImageLayout/ImageLayout.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +92,7 @@
       <workItem from="1666672534600" duration="17199000" />
       <workItem from="1666699693818" duration="8033000" />
       <workItem from="1666714310563" duration="4584000" />
-      <workItem from="1667467436974" duration="20942000" />
+      <workItem from="1667467436974" duration="21859000" />
     </task>
     <servers />
   </component>
