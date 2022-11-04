@@ -26,3 +26,33 @@ X
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+O
+src/components/Navbar/Navbar.js,d/9/d98f8b3f1cd3ee72ed5f6e403515ab1d1f07a3ae
+P
+ src/components/FancyBox/index.js,2/f/2f6d5681a66de811e896dcd0a99946c8349054e9
+N
+src/hooks/useImagePreloader.js,4/3/431f6ee88fee5daeb56246d93258fbbab03c3b99
+A
+gatsby-browser.js,c/8/c8df22cf90adfac9a95adc94b85984d3a6b193cd
+B
+src/pages/about.js,2/0/207946fdb4f923496ff01d702cfb0e32de6e79c6
+@
+gatsby-config.js,4/f/4f261c6e46142df5e9a7303296b3fca674d719a9
+S
+#src/components/ImageLayout/index.js,c/0/c0e3b4a1b45d170d7325e13022312a03249227df
+V
+&src/components/Navbar/Navbar.config.js,7/b/7bd4a399079b3bd72be0ffac7cf24dd16d089da0
+<
+package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
+O
+src/components/Layout/Layout.js,a/3/a39dce0a5cc1e53785ace214d3d00a6dbf9fcabf
+B
+src/pages/index.js,c/1/c16ef34da304c300e7b6c91b3a47fea77c278c7a
+T
+$src/assets/svgIcons/CameraIsoIcon.js,0/7/07810c219cd4eb91f38d0e647e06d54aa758eb32
+E
+src/styles/global.css,3/e/3ea85257d8c74ab2f79dac9121fc26edb558777a
+S
+#src/components/FancyBox/FancyBox.js,d/9/d91305e35fab820fe3b2bcb53a9c5e1e360efd06
+Y
+)src/components/ImageLayout/ImageLayout.js,0/4/04434fd56c91e6959633b82ffdb63086590bbbf0
