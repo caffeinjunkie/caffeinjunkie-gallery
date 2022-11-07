@@ -21,12 +21,12 @@ export default function ImageLayout({ data }) {
       }
       case 'shutterSpeed': return {
         Icon: ShutterSpeedIcon,
-        text: `${value} s`,
+        text: `${value}s`,
         metadataKey
       }
       case 'aperture': return {
         Icon: ApertureIcon,
-        text: `f ${value}`,
+        text: `f/${value}`,
         metadataKey
       }
       default: return {
