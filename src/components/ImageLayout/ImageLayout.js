@@ -1,10 +1,10 @@
 import React from 'react';
-import CameraIcon from '@mui/icons-material/Camera';
-import ShutterSpeedIcon from '@mui/icons-material/ShutterSpeed';
-import CameraAltIcon from '@mui/icons-material/CameraAlt';
 
 import { FancyBox } from '../FancyBox'
 import CameraIsoIcon from '../../assets/svgIcons/CameraIsoIcon';
+import ShutterSpeedIcon from '../../assets/svgIcons/ShutterSpeedIcon';
+import LensIcon from '../../assets/svgIcons/LensIcon';
+import ApertureIcon from '../../assets/svgIcons/ApertureIcon';
 
 export default function ImageLayout({ data }) {
   const { title, url: fileName, _id: key, cameraMetadata } = data;
@@ -25,12 +25,12 @@ export default function ImageLayout({ data }) {
         metadataKey
       }
       case 'aperture': return {
-        Icon: CameraIcon,
+        Icon: ApertureIcon,
         text: `f ${value}`,
         metadataKey
       }
       default: return {
-        Icon: CameraIcon,
+        Icon: ApertureIcon,
         text: `${value}`,
         metadataKey: 'default'
       }
@@ -56,7 +56,7 @@ export default function ImageLayout({ data }) {
         text text-white font-inter font-light text-lg sm:text-xl text-left
         gap-3 items-center"
     >
-      <Icon className="text-white"/>
+      <Icon/>
       {text}
     </div>
   )
@@ -73,9 +73,9 @@ export default function ImageLayout({ data }) {
   
   const renderOverlay = () => {
     const cameraAndLensMetadataValue = {
-      Icon: CameraAltIcon,
-      text: `${camera} + ${lens}`,
-      metadataKey: 'cameraAndLens'
+      Icon: LensIcon,
+      text: lens,
+      metadataKey: 'lens'
     }
     
     return (

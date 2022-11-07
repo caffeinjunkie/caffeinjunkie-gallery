@@ -4,7 +4,7 @@ import { Button, Drawer } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
 
 import { MENU_ITEMS, DRAWER_ITEMS } from './Navbar.config';
-import InstagramIcon from '../../assets/svgIcons/InstagramIcon.component'
+import InstagramIcon from '../../assets/svgIcons/InstagramIcon'
 
 export default function Navbar() {
   const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
