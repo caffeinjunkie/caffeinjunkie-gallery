@@ -5,7 +5,7 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby's hello-world starter
+  Picture Gallery
 </h1>
 
 Check the website here https://caffeinjunkie.gatsbyjs.io/
